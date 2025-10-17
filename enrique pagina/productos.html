@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Racco</title>
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <header>
+        <h1>Productos Capilares Racco</h1>
+    </header>
+
+    <main>
+        <section class="productos">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="img/produc1.jpeg" alt="Producto 1">
+                <h3>Shampoo Racco</h3>
+                <p>Precio: $15</p>
+                <button onclick="agregarCarrito('Shampoo Racco', 15)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="img/produc2.jpeg" alt="Producto 2">
+                <h3>Acondicionador Racco</h3>
+                <p>Precio: $18</p>
+                <button onclick="agregarCarrito('Acondicionador Racco', 18)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="img/produc3.jpeg" alt="Producto 3">
+                <h3>Mascarilla Capilar</h3>
+                <p>Precio: $25</p>
+                <button onclick="agregarCarrito('Mascarilla Capilar', 25)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="img/produc4.jpeg" alt="Producto 4">
+                <h3>Serum Racco</h3>
+                <p>Precio: $20</p>
+                <button onclick="agregarCarrito('Serum Racco', 20)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="img/produc5.jpeg" alt="Producto 5">
+                <h3>Spray Capilar</h3>
+                <p>Precio: $12</p>
+                <button onclick="agregarCarrito('Spray Capilar', 12)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="img/produc6.jpeg" alt="Producto 6">
+                <h3>Champú Anticaspa</h3>
+                <p>Precio: $16</p>
+                <button onclick="agregarCarrito('Champú Anticaspa', 16)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="producto">
+                <img src="img/produc7.jpeg" alt="Producto 7">
+                <h3>Aceite Capilar</h3>
+                <p>Precio: $22</p>
+                <button onclick="agregarCarrito('Aceite Capilar', 22)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="producto">
+                <img src="img/produc8.jpeg" alt="Producto 8">
+                <h3>Gel Fixador</h3>
+                <p>Precio: $10</p>
+                <button onclick="agregarCarrito('Gel Fixador', 10)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="producto">
+                <img src="img/produc9.jpeg" alt="Producto 9">
+                <h3>Crema Nutritiva</h3>
+                <p>Precio: $19</p>
+                <button onclick="agregarCarrito('Crema Nutritiva', 19)">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="producto">
+                <img src="img/produc10.jpeg" alt="Producto 10">
+                <h3>Leave-in Racco</h3>
+                <p>Precio: $14</p>
+                <button onclick="agregarCarrito('Leave-in Racco', 14)">Agregar al carrito</button>
+            </div>
+        </section>
+
+        <aside class="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito">
+                <!-- Productos agregados aparecerán aquí -->
+            </ul>
+            <p>Total: $<span id="total">0</span></p>
+        </aside>
+    </main>
+     <a href="index.html" class="btn-volver">⬅ Volver al inicio</a>
+
+    <script>
+        let total = 0;
+
+        function agregarCarrito(nombre, precio) {
+            const lista = document.getElementById('lista-carrito');
+            const item = document.createElement('li');
+            item.textContent = `${nombre} - $${precio}`;
+            lista.appendChild(item);
+
+            total += precio;
+            document.getElementById('total').textContent = total;
+        }
+    </script>
+</body>
+</html>
